@@ -1,0 +1,74 @@
+ *,*::before, *::after{
+     box-sizing: borde-box;
+     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+     
+ }
+ :root{
+     --hue-neutral: 250;
+     --hue-wrong: 0;
+     --hue-correct: 145;
+ }
+ body{
+     --hue: var(--hue-neutral);
+     padding:0;
+     margin:0;
+     max-width: 100%;
+     display:flex;
+     justify-content:center;
+     align-items: center;
+     background-color: hsl(var(--hue), 90%,20%)
+
+ }
+ body-correct{
+     --hue: var(--hue-correct);
+ }
+ body-wrong{
+     --hue: var(--hue-correct)
+ }
+ .container{
+     max-width: width 80%;
+     background-color:rgb(216, 208, 193);
+     padding: 10px;
+     box-shadow: 10px 10px 4px rgb(116, 108, 108);
+ }
+ .grid{
+     display:grid;
+     grid-template-columns:repeat(2, auto);
+     gap:10px;
+     padding:10px;
+
+ }
+ .btn{
+     --hue: var(--hue-neutral);
+     border: 1px solid black;
+     border-radius:6px;
+     background-color: hsl(var(--hue), 100%, 50%);
+
+
+ }
+ .btn:hover{
+     transform: scale(1.05);
+     border: 1px solid rgb(248, 142, 12);
+ }
+ .btn.correct{
+     --hue:var(--hue-correct);
+     color:black;
+
+ }
+ .btn.wrong{
+     --hue:var(--hue-wrong);
+
+ }
+ .startBtn, .nextBtn{
+     font-size: 1.5rem;
+     font-weight: bolder;
+     padding: 10px 20px;
+ } 
+ .controls{
+     display: flex;
+     justify-content:center;
+     align-items: center;
+ }
+ .hide{
+     display:none;
+ }
